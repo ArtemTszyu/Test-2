@@ -1,10 +1,12 @@
 #include <iostream>
 #include <sstream>
 #include <utility>
+#include <stdlib.h>
 using namespace std;
 
 bool str(float *st,int n)
 {
+    char x;
     bool h=true;
     string t;
     getline(cin,t);
@@ -16,6 +18,10 @@ bool str(float *st,int n)
             h = false;
             return false;
         }
+    }
+    if (stream>>x){
+        cout<<"An error has occured while reading numbers from line";
+        exit(0);
     }
     return true;
 }
@@ -46,7 +52,7 @@ int main() {
         unsigned int n;
             if(!(cin >> n)) {
         cout << "An error has occured while reading numbers from line";
-        return -1;
+        return 0;
     }
         cin.get();
         float *st = new float[n];
