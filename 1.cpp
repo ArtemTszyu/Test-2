@@ -39,7 +39,7 @@ void reverse (float* st, int n)
 
 
 
-void print_st(float * st, unsigned int n)
+void print_st(float * st,int n)
 {
     for (unsigned int i = 0; i < n; i++)
     {
@@ -49,8 +49,8 @@ void print_st(float * st, unsigned int n)
 
 int main() {
 
-        unsigned int n;
-            if(!(cin >> n)) {
+        int n;
+            if(!(cin >> n)||(n<0)) {
         cout << "An error has occured while reading numbers from line";
         return 0;
     }
